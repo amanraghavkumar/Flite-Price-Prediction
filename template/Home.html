@@ -1,0 +1,49 @@
+
+<html>
+<style>
+    .section
+    {
+        width: 800px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        background-color:graw;
+        align-items: center;
+        text-align:center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin:auto;
+        margin-top:40px;
+        
+    }
+    
+</style>
+<body>
+    <div class="section">
+
+        <div class='login'>
+        <h1>Flite Price Prediction</h1>
+        <form action="{{url_for('Predict_datapoint')}}" method="post">
+            <input type='text' name="Airline" placeholder="Airline" required="required" /><br>
+            <br/>
+            <input type='text' name="Date_of_Journey" placeholder="Date_of_Journey" required="required"/><br>
+            <br/>
+            <input type='text' name="Source" placeholder="Source" required="required"/><br>
+            <br/>
+            <input type='text' name="Destination" placeholder="Destination" required="required"/><br>
+            <br/>
+            <input type='text' name="Dep_Time" placeholder="Dep_Time" required="required"/><br>
+            <br/>
+            <input type='text' name="Arrival_Time" placeholder="Arrival_Time" required="required"/><br>
+            <br/>
+            <input type='text' name="Total_Stops" placeholder="Total_Stops" required="required"/><br>
+            <br/>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    <h2>
+        The Prediction is {{result}}
+    </h2>
+    </div>
+</div> 
+<body>
+</html>
